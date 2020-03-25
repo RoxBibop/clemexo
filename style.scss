@@ -19,7 +19,47 @@ body {
 	width : 100vw;
 	margin : 0;
 
-
+	.loader {
+		height: 100vh;
+		width : 100vw;
+		position: absolute;
+		top : 0;
+		left : 0;
+		background-color: rgb(255, 134, 21);
+		z-index: 999;
+		font-family: comic;
+		color: white;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		opacity: 1;
+		transition: .8s;
+	}
+	.none {
+		opacity: 0;
+	}
+	.adieu {
+		display: none;
+	}
+	.ml6 {
+		position: relative;
+		font-weight: 900;
+		font-size: 3.3em;
+	}
+	
+	.ml6 .text-wrapper {
+		position: relative;
+		display: inline-block;
+		padding-top: 0.2em;
+		padding-right: 0.05em;
+		padding-bottom: 0.1em;
+		overflow: hidden;
+	}
+	
+	.ml6 .letter {
+		display: inline-block;
+		line-height: 1em;
+	}
 	.smiley {
 		height : 400px;
 		width : 400px;
