@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Funny Guy Game</title>
+		<link rel="stylesheet" href="./style/style.min.css">
+	</head>
+
+	<body>
+		<div class="scene">
+			<div class="btn"> Infos !</div>
+		</div>
+		</div>
+		<div class="smiley">
+			<div class="eyeLeft"></div>
+			<div class="eyeRight"></div>
+			<div class="mouth"></div>
+		</div>
+
+		<div class="modal">
+			<div class="title">
+				<div class="cross">
+					<div class="a"></div>
+					<div class="b"></div>
+				</div>
+				Ok, C'est quoi le plan ?
+			</div>
+			<div class="body">
+				<p>Bon ! Voyant que tu kiffais un peu le code et que tu voulais apprendre, m'est venue une idée. <br>
+					Une série d'exercices qui se suivent afin d'aboutir à un espèce de jeu-vidéo.
+					Je m'explique : Comme tu l'as vu en arrivant sur le site, y'a un gros bonhomme au centre de l'écran. <br>
+					Le but c'est que tu reproduise cette scène dans un premier temps ( c'est d'ailleurs le sujet du premier exo ).
+					Et que par la suite, on rajoute des machins. et pour ça, j'ai plein d'idées ! <br>
+					Je t'en cite quelques unes : <br>
+				</p>
+				<ul>
+					<li>Une sorte de tammagochi ( il faudrait le nourrir et nettoyer son caca sinon il est triste)</li>
+					<li>Un système de customisation ( pouvoir changer le décor, lui mettre des chapeau.. )</li>
+					<li>Rajouter de la musique dans le fond</li>
+					<li>Le faire réagir à la meteo du jour en se basant sur une API</li>
+					<li>etc etc etc...</li>
+				</ul>
+				<p>Les possibilités sont multiples et ça te permettrait de voir a peu près TOUT ce qu'il faut voir pour savoir faire un site web <br>
+				et si l'envie nous en prends on peut carrément faire un système de connection avec création de compte, pour garder notre progression... <br>
+					Tu vois l'idée...! Alors évidemment, c'est pas en deux semaines que tu sauras faire tout ça, mais si tu kiffes et que tu laches pas, t'as moyen =)
+					<br>
+					Et si tu kiffes pas, moi ça m'aura éclaté de faire ça et je le continuerais solo haha !
+					<br> bref...! Si t'es chaud, ou quand tu le seras, ferme ce panneau, et rends toi sur le panneau coulissant à droite du site. Ton premier exo t'attends ;)
+				</p>
+			</div>
+		</div>
+		<div class="pannelCtn">
+			<div class="ctn">
+				<p class="title">Premier Exo !</p>
+				<div class="exo">
+					<p>Ok on y est ! Le but dans un premier temps, va être de reproduire la tronche au milieu de l'écran et de la mettre dans son environnement =)</p>
+					<br>
+					<p>Dans un premier temps, tu auras besoin du décor ! Je te laisse choisir : </p>
+					<br>
+					<br>
+					<a href="./img/12865.jpg" class="link" target="_blank">Automne</a>
+					<a href="./img/12866.jpg" class="link" target="_blank">Hiver</a>
+					<a href="./img/12864.jpg" class="link" target="_blank">Printemps</a>
+					<br>
+					<br>
+					<br>
+					<p>Ca, ce sera évidemment pour mettre en <span>background-image</span> dans ton CSS.</p>
+					<br>
+					<p>Ensuite, va falloir que tu fasse un une <span>div</span> qui sera ronde et qui va contenir 3 autres <span>div</span>. Une pour chaque oeil, et une pour la bouche.</p>
+					<br>
+					<p>
+						Si tu veux la solution pour les ronds, clique <span class="ici">ICI</span>
+					</p>
+					<div class="tooltip">
+						<div class="minicroi">
+							<div class="a"></div>
+							<div class="b"></div>
+						</div>
+						.rond { border-radius : 50%; }<br><br>
+						.bouche { border-radius : 0 0 100px 100px; }
+					</div>
+					<br>
+					<p>Pour la suite, il va fallor que tu les places. Pour ça, plusieurs solutions s'offrent à toi, tu peux checker du côté des <span>position</span> en CSS. Et si t'as besoin d'aide, hésites pas !</p>
+					<br>
+					<p>En ce qui concerne l'ombre sur le bonhomme, je t'invite à regarder les <span>gradient</span> en CSS. C'est ce que j'ai utilisé</p>
+					<br>				
+					<p>Enfin, si tu te sens d'attaque, tu peux essayer l'animation des yeux, pour ça, j'ai utilisé les <span>keyframes</span> Mais c'est le boss de fin, c'est un poil complexe quand on débute :)</p>
+					<br>
+					<p>BONNE CHANCE !</p>
+				</div>
+			</div>
+			<div class="arrow">
+				<div class="triangle"></div>
+			</div>
+		</div>
+		<script src="app.js"></script>
+	</body>
+</html>

@@ -1,0 +1,369 @@
+@import url(https://fonts.googleapis.com/css?family=Changa+One);
+@font-face { 
+	font-family: "comic";
+	src: url("../fonts/pana.otf");
+}
+
+$font : 'Changa One', arial, serif;
+$comic : 'comic';
+
+body {
+	background-image: url('../img/12864.jpg');
+	background-size: cover;
+	background-position: bottom -150px right 0px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	height : 100vh;
+	width : 100vw;
+	margin : 0;
+
+
+	.smiley {
+		height : 400px;
+		width : 400px;
+		background-color: rgb(255, 217, 0);
+		border-radius: 50%;
+		background: radial-gradient(circle at 100px 100px, #fffd91, rgb(236, 114, 0));
+		position: relative;
+
+		.eyeLeft {
+			height :80px;
+			width : 80px;
+			background-color: black;
+			border-radius: 50%;
+			position: absolute;
+			top : 30%;
+			left : 15%;
+			transform: scaleY(1);
+			animation-duration: 2.5s;
+			animation-name: blink;
+			animation-iteration-count : infinite;
+			animation-direction: alternate;
+		}
+		.eyeRight {
+			height : 80px;
+			width : 80px;
+			background-color: black;
+			border-radius: 50%;
+			position: absolute;
+			top : 30%;
+			right : 15%;
+			transform: scaleY(1);
+			animation-duration: 2.5s;
+			animation-name: blink;
+			animation-iteration-count : infinite;
+			animation-direction: alternate;
+		}
+
+		.mouth
+		{
+			width: 45%;
+			height: 25%;
+			border-top-left-radius: 0;
+			border-top-right-radius: 0;
+			border-bottom-left-radius: 100px;
+			border-bottom-right-radius: 100px;
+			box-sizing: border-box;
+			position: absolute;
+			bottom: 13%;
+			left: 27%;
+			background: rgb(0, 0, 0);
+			transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+		}
+	}
+
+	.scene {
+		position: absolute;
+		right : 100px;
+		top : 50px;
+		perspective: 500px;
+		border-radius: 8px;
+		box-shadow: 0px 13px 27px -9px rgba(255, 255, 255, 0.671);
+		transition: .1s;
+
+		div{
+			font-family: $font;
+			position: relative;
+			color: #fff;
+			text-decoration: none;
+			background-color: #267af7;
+			font-size: 28px;
+			display: block;
+			padding: 10px;
+			width: 120px;
+			border-radius: 8px;
+			box-shadow: 0px 9px 0px #2055c9;
+			text-align: center;
+			transition: all .1s ease;
+			user-select: none;
+		}
+		div:hover {
+			cursor : pointer;
+			background-color: #428eff;
+		}
+		
+		.divActive{
+			box-shadow: 0px 3px 0px #1b3ba3, 0px 3px 6px rgba(0,0,0,.9);
+			transform: translateY(4px);
+		}		
+	}
+	.sceneActive {
+		box-shadow: 0px 13px 27px -9px rgb(143, 143, 143);
+	}	
+
+
+	.modal {
+		position: absolute;
+		height : 70%;
+		width : 40%;
+		background-color: #FFF;
+		border-radius: 35px;
+		box-shadow: 0px 0px 60px -16px rgba(0,0,0,0.75);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-start;
+		transition: .3s;
+		transform: scale(0);
+
+		.cross{
+			position: absolute;
+			top : 50%;
+			right : 10%;
+			height : 30px;
+			width : 30px;
+			display: flex;
+			align-items: center;
+			justify-content : center;
+			transform: rotate(45deg) translateY(-50%);
+			.a {
+				position: absolute;
+				width : 100%;
+				height : 20%;
+				background-color: #3c65eb;
+			}
+			.b {
+				background-color: #3c65eb;
+				width : 20%;
+				height : 100%;
+			}
+		}
+		.cross:hover {
+			cursor: pointer;
+		}
+
+		.title{
+			position: relative;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height : 15%;
+			width: 100%;
+			font-family: $font;
+			font-size: 25px;
+			font-weight: 100;
+			color:#3c65eb;
+		}
+		.body {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: flex-start;
+			height : 76%;
+			width: 90%;
+			overflow: auto;
+			padding : 0 20px;
+
+			p, li{
+				margin: 0;
+				font-weight: 100;
+				font-size: 18px;
+				color: rgb(75, 75, 75);
+				font-family: comic;		
+				text-align: center;
+			}
+			li {
+				text-align: left;
+			}
+		}
+	}
+	.modalActive {
+		transform: scale(1);
+	}
+	.pannelCtn {
+		height : 90%;
+		width : 30%;
+		position: absolute;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		left : -27.5%;
+		transition: .5s;
+
+		.ctn{
+			height: 100%;
+			width : 100%;
+			background-color: white;
+			border-radius: 0 5% 5% 0;
+			box-shadow: 0px 0px 40px -1px rgba(0,0,0,0.65);
+			transition: .5s;
+			padding-left: 40px;
+			padding-top: 20px;
+
+			.title{
+				position: relative;
+				width: 100%;
+				font-family: $font;
+				font-size: 25px;
+				font-weight: 100;
+				color:#3c65eb;
+			}
+			.exo {
+				position : absolute;
+				direction: rtl;
+				height: 80%;
+				width : 70%;
+				left : 10px;
+				overflow: auto;
+				padding-right: 70px;
+				text-align: left;
+				padding-left: 20px;
+				p, a {
+					margin: 0;
+					font-weight: 100;
+					font-size: 14px;
+					color: rgb(75, 75, 75);
+					font-family: comic;		
+				}
+				a {
+					color : #fff;
+					padding : 7px;
+					border-radius: 5px;
+					background-color:#3c65eb;
+					margin-left: 12px;
+					text-decoration: none;
+					transition: .3s;
+				}
+				a:hover{
+					background-color:#6c8dfa;
+				}
+				span {
+					color : #ff8851;
+				}
+			}
+		}
+		.ctnActive {
+			border-radius: 0 40% 5% 0;
+		}
+		.arrow
+		{
+			border-style: outset;
+			height: 70px;
+			width : 40px;
+			border-radius: 0 50% 50% 0;
+			background-color: white;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			.triangle{
+				display : inline-block;
+				height : 0;
+				width : 0;
+				border-top : 15px solid transparent;
+				border-bottom : 15px solid transparent;
+				border-left : 13px solid rgb(62, 78, 231);
+				transform: rotate(0deg) translateX(0px);
+				transition: .5s;
+			}
+			.triangleActive {
+				transform: rotate(180deg) translateX(5px);
+			}
+		}
+		.arrow:hover{
+			cursor: pointer;
+		}
+	}
+	.pannelActive{
+		left : 0;
+	}
+}
+.ici:hover {
+	cursor : pointer;
+}
+/* Tooltip container */
+.tooltip {
+  position: absolute;
+	top : 50%;
+	left : 50%;
+	background-color: red;
+	height : auto;
+	width : 60%;
+	transform: translateX(-61%) translateY(-50%);
+	border-radius: 15px;
+	background-color: rgb(29, 29, 29);
+	color : white;
+	font-family: sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content : center;
+	text-align: center;
+	display: none;
+	padding-top: 10%;
+	padding-bottom: 10%;
+	.minicroi {
+		position: absolute;
+		top : 10px;
+		right : 20px;
+		height : 15px;
+		width: 15px;
+		display: flex;
+		align-items: center;
+		justify-content : center;
+		transform: rotate(45deg) translateY(-50%);
+		.a {
+			position: absolute;
+			width : 100%;
+			height : 20%;
+			background-color: #ffffff;
+		}
+		.b {
+			background-color: #ffffff;
+			width : 20%;
+			height : 100%;
+		}
+	}
+	.minicroi:hover {
+		cursor: pointer;
+	}
+}
+.visible {
+	display: block;
+}
+::-webkit-scrollbar{
+	width: 10px;
+	background-color: rgb(160, 160, 160);
+	border-radius: 150%;
+}
+
+::-webkit-scrollbar-track {
+	background: #dddddd;
+	border-radius: 100px;
+}
+::-webkit-scrollbar-thumb {
+	background: rgb(45, 115, 219);
+	border-radius: 100px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(100, 162, 255); 
+}
+@keyframes blink {
+	0% { border-radius : 50%; transform: scaleY(1);}
+	85% { border-radius : 50%; transform: scaleY(1);  }
+	90% { border-radius : 0%; transform: scaleY(.1);}
+	95% { border-radius : 50%; transform: scaleY(1); }
+  100% {border-radius : 50%; transform: scaleY(1);  }
+}
